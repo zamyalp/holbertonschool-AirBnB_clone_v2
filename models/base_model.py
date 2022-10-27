@@ -6,6 +6,8 @@ from datetime import datetime
 from sqlalchemy import Column, String, DATETIME
 from sqlalchemy.ext.declarative import declarative_base
 
+Base = declarative_base()
+
 
 class BaseModel:
     """A base class for all hbnb models"""
@@ -27,7 +29,7 @@ class BaseModel:
                     if key in ('created_at', 'updated_at'):
                         setattr(self, key, datetime.fromisoformat(value))
                     else:
-                        setattr(self, key, value):
+                        setattr(self, key, value)
             # if os.getenv('HBNB_TYPE_STORAGE') in ('db'):
             if not hasattr(kwargs, 'id'):
                 setattr(self, 'id', str(uuid.uuid4()))
