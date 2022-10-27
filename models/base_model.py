@@ -58,7 +58,7 @@ class BaseModel:
 
     def to_dict(self):
         """Convert instance into dict format"""
-        result = {}
+        res = {}
         for key, value in self.__dict__.items():
             if key != '_sa_instance_state':
                 if isinstance(value, datetime):
