@@ -2,7 +2,6 @@
 """ Console Module """
 import cmd
 import sys
-from shlex import split
 from symbol import parameters
 from models.base_model import BaseModel
 from models.__init__ import storage
