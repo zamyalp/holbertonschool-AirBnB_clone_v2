@@ -7,6 +7,7 @@ class User(BaseModel):
     """This class defines a user by various attributes"""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     __tablename__ = 'users'
     email = Column(
         String(128), nullable=False
@@ -40,8 +41,13 @@ class User(BaseModel):
     reviews = relationship("Review", backref="user", cascade="delete")
 >>>>>>> e8b9892ed9f286b5d44f2bae3c4eb670207c9646
 =======
+=======
+>>>>>>> parent of 95420d1... pushed user.py
     email = ''
     password = ''
     first_name = ''
     last_name = ''
+<<<<<<< HEAD
+>>>>>>> parent of 95420d1... pushed user.py
+=======
 >>>>>>> parent of 95420d1... pushed user.py
