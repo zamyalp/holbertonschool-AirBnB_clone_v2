@@ -23,7 +23,7 @@ class User(BaseModel, Base):
         String(128), nullable=True
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else ''
     places = relationship(
-        'place',
+        'Place',
         cascade="all, delete, delete-orphan",
         backref='user'
     ) if os.getenv('HBNB_TYPE_STORAGE') == 'db' else None
