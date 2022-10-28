@@ -101,3 +101,5 @@ class Place(BaseModel, Base):
                 if value.place_id == self.id:
                     reviews_of_place.append(value)
             return reviews_of_place
+places = relationship("Place", backref='user', cascade='delete')
+    reviews = relationship("Review", backref='user', cascade='delete')
