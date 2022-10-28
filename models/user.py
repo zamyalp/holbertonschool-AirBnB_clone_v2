@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 """This module defines a class User"""
-import os
-from sqlalchemy import Column, String
-from sqlalchemy.orm import relationship
-
-from models.base_model import BaseModel, Base
+from models.base_model import BaseModel
 
 
-class User(BaseModel, Base):
+class User(BaseModel):
     """This class defines a user by various attributes"""
+<<<<<<< HEAD
 <<<<<<< HEAD
     __tablename__ = 'users'
     email = Column(
@@ -42,3 +39,9 @@ class User(BaseModel, Base):
     places = relationship("Place", backref="user", cascade="delete")
     reviews = relationship("Review", backref="user", cascade="delete")
 >>>>>>> e8b9892ed9f286b5d44f2bae3c4eb670207c9646
+=======
+    email = ''
+    password = ''
+    first_name = ''
+    last_name = ''
+>>>>>>> parent of 95420d1... pushed user.py
