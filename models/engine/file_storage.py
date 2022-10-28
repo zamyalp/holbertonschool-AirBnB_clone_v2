@@ -13,19 +13,10 @@ class FileStorage:
         """Returns a dictionary of models currently in storage"""
         if cls is None:
             return self.__objects
-        else:
-            filtered_dict = {}
-            for key, value in self.__objects.items():
-                if type(value) is cls:
-                    filtered_dict[key] = value
-        return filtered_dict
-
-    def delete(self, obj=None):
-        """removes an object from storage"""
-        if obj is not None:
-            obj_key = obj.to_dict()['__class__'] + '.' + obj.id
-            if obj_key in self.__objects.keys():
-                del self.__objects[obj_key]
+        return {
+            key: value for key, value in self.__objects.items()
+            if type(value) is cls
+        }
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
@@ -63,3 +54,12 @@ class FileStorage:
                         self.all()[key] = classes[val['__class__']](**val)
         except FileNotFoundError:
             pass
+
+    def delete(self, obj=None):
+        """removes an object from storage"""
+        if obj:
+            key = obj.to_dict()['__class__'] + '.' + obj.id
+            try:
+                del self.__objects[key]
+            except Exception:
+                return
