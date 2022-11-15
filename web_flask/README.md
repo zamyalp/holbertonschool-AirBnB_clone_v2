@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 General
 What is a Web Framework
 How to build a web framework with Flask
@@ -33,3 +34,7 @@ You are not allowed to use !important or id (#... in the CSS file)
 All tags must be in uppercase
 Current screenshots have been done on Chrome 56.0.2924.87.
 No cross browsers
+=======
+# holbertonschool-higher_level_programming
+Schoool 
+>>>>>>> 7b13fa883303f4b45ec1f248ea9606bc13e0b01a
