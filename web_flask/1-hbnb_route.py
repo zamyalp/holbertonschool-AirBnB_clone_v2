@@ -11,7 +11,7 @@ def hello_hbnb():
     return 'Hello HBNB!'
 
 @app.route('/hbnb', strict_slashes=False)
-def display_hbnb():
+def hbnb_route():
     """Returns a string at the root route"""
     return 'HBNB'
 
